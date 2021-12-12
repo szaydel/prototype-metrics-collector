@@ -8,9 +8,9 @@ import (
 )
 
 func makeName(words []string, index int) string {
-	prefix := strings.Join(words[:1], ".")
-	suffix := strings.Join(words[1:3], ".")
-	return fmt.Sprintf("%s.%d.%s", prefix, index, suffix)
+	prefix := strings.Join(words[:1], "_")
+	suffix := strings.Join(words[1:3], "_")
+	return fmt.Sprintf("%s_%d_%s", prefix, index, suffix)
 }
 
 type MockSource struct {
